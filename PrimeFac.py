@@ -3,7 +3,7 @@ import math
 # The list of all prime factories of this number    
 list_p = []
 
-# We can use this function to judge if the number is a prime
+# We can use this function to judge if the number is prime
 def judge_p(number:int) :
     if number == 2:
         return(True)
@@ -12,7 +12,7 @@ def judge_p(number:int) :
             return(False)
     return(True)
 
-# Use this function, we can get a list of all the prime
+# Use this function, we can get a list of all the primes
 # which we want to do factorisation.
 def getProduct(num):
     
@@ -27,10 +27,10 @@ def getProduct(num):
                 if judge_p(i):
                     list_p.append(i)
                     r = int(num / i)
-                    # We will do iteration untill all the factoris are prime
+                    # We will do iteration untill all the factoris are prime number
                     # By the fundamental theorem of arithmetic and divisors
                     # We know that the experission is unique.
-                    # So, we can start at any prime
+                    # So, we can start at any prime number
                     getProduct(num = r)
                     break
             i += 1
@@ -53,7 +53,7 @@ def prime_fac():
     for prime in list_p:
         dic_p[prime] = 0
         
-    # Count the power of all the primen 
+    # Count the power of all the prime
     for prime in list_p:
         dic_p[prime] += 1
     equation = ''
